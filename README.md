@@ -6,9 +6,9 @@ And everything is fine, node_modules dir created locally.
 
 After that i changed the import path of express to locally (from node_modules)
 
-It was actually my silly mistake,
+EDIT: It was actually my silly mistake,
 
-I dint explicitly specified the index.js file express folder...
+I dint explicitly specified the index.js file in express folder...
 
 Here's the following path
 
@@ -16,12 +16,13 @@ Here's the following path
  
 When i ran it, It just throws Access Denied Error (5)
 
+So that was my mistake,
 
 That problem solved when i tried with providing index.js in Path,
 
 `./node_modules/.deno/express@4.18.2/node_modules/express/index.js`
 
-But it also throws a error Which `there is no default exported member`
+But this throws an another error Which `there is no default exported member`
 
 I guess this error basically comes from node's require() function is still used on the file...
 
